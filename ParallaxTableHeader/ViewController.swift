@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         let topConstraint = imageView.topAnchor.constraint(equalTo: view.topAnchor)
         topConstraint.isActive = true
 
-        let relativeHeight = tableView.bounds.height / 4.5
+        let relativeHeight = CGFloat(UIScreen.main.bounds.height) / 4
         if let tableHeaderView = tableView.tableHeaderView {
             tableView.tableHeaderView!.bounds = CGRect(origin: tableHeaderView.bounds.origin, size: CGSize(width: tableHeaderView.bounds.size.width, height: relativeHeight))
         }
